@@ -83,12 +83,11 @@
       var workTasks = [];
       var time = moment().hour();
       var tasks;
-      console.log(time);
 
       document.getElementById("sav-0").addEventListener("click", function(){
+        console.log(workTasks);
         tasks = document.getElementById("task-0").value;
         workTasks[0] = tasks;
-        console.log(workTasks[0]);
         saveTasks();
       }, false);
 
