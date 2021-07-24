@@ -82,11 +82,14 @@
     <script>
       var workTasks = ['','','','','','','','',''];
       var time = moment().hour();
+      console.log(time);
       document.getElementById("sav-0").addEventListener("click", function(){
         var tasks = document.getElementById("task-0").value;
         workTasks[0] = tasks;
+        console.log(workTasks[0]);
         saveTasks();
       }, false);
+
       document.getElementById("sav-1").addEventListener("click", function(){
         var tasks = document.getElementById("task-1").value;
         workTasks[1] = tasks;
@@ -130,25 +133,25 @@
       
       var saveTasks = function(){
         localStorage.setItem("workTasks", JSON.stringify(workTasks));
-        console.log(workTasks);
       };
 
       var loadTasks = function(){
         workTasks = JSON.parse(localStorage.getItem("workTasks"));
-        console.log(workTasks);
+        
+        document.getElementById("task-0").value = workTasks[0];
+        document.getElementById("task-1").value = workTasks[1];
+        document.getElementById("task-2").value = workTasks[2];
+        document.getElementById("task-3").value = workTasks[3];
+        document.getElementById("task-4").value = workTasks[4];
+        document.getElementById("task-5").value = workTasks[5];
+        document.getElementById("task-6").value = workTasks[6];
+        document.getElementById("task-7").value = workTasks[7];
+        document.getElementById("task-8").value = workTasks[8];
       };
 
       loadTasks();
 
-      document.getElementById("task-0").value = workTasks[0];
-      document.getElementById("task-1").value = workTasks[1];
-      document.getElementById("task-2").value = workTasks[2];
-      document.getElementById("task-3").value = workTasks[3];
-      document.getElementById("task-4").value = workTasks[4];
-      document.getElementById("task-5").value = workTasks[5];
-      document.getElementById("task-6").value = workTasks[6];
-      document.getElementById("task-7").value = workTasks[7];
-      document.getElementById("task-8").value = workTasks[8];
+      
 
       if(time == 9){
         document.getElementById("task-0").setAttribute("class", "col-md-9 present");
