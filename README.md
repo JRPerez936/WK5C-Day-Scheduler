@@ -9,3 +9,6 @@ entry points.
 
 Below is an example of what the website looks like: <br />
 ![Work Day Scheduler](https://user-images.githubusercontent.com/85633985/126857475-747ab7f6-ffeb-4e04-bc1a-ce6ec58409b2.gif) <br />
+
+A link to the webpage can be found here: <br />
+https://jrperez936.github.io/WK5C-Day-Scheduler/
