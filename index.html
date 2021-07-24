@@ -80,9 +80,10 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script>
-      var workTasks = ['','','','','','','','',''];
+      var workTasks = [];
       var time = moment().hour();
       console.log(time);
+
       document.getElementById("sav-0").addEventListener("click", function(){
         var tasks = document.getElementById("task-0").value;
         workTasks[0] = tasks;
@@ -150,8 +151,6 @@
       };
 
       loadTasks();
-
-      
 
       if(time == 9){
         document.getElementById("task-0").setAttribute("class", "col-md-9 present");
@@ -263,6 +262,6 @@
         document.getElementById("task-7").setAttribute("class", "col-md-9 future");
         document.getElementById("task-8").setAttribute("class", "col-md-9 future");
       }
-    </script>
+      </script>
   </body>
 </html>
