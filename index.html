@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
@@ -137,7 +137,7 @@
 
       var loadTasks = function(){
         workTasks = JSON.parse(localStorage.getItem("workTasks"));
-        
+
         document.getElementById("task-0").value = workTasks[0];
         document.getElementById("task-1").value = workTasks[1];
         document.getElementById("task-2").value = workTasks[2];
