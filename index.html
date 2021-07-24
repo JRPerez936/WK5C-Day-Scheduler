@@ -32,51 +32,109 @@
       <!-- Timeblocks go here -->
       <div class="row">
         <div class="col-md-2 time-block"><p class="hour">9AM</p></div>
-        <textarea class="col-md-9"></textarea>
-        <div class="col-md-1 saveBtn"><button class="fas fa-save mt-4"></button></div>
+        <textarea class="col-md-9" id="task-0"></textarea>
+        <div class="col-md-1 saveBtn"><button class="fas fa-save mt-4" id="sav-0"></button></div>
       </div>
       <div class="row">
         <div class="col-md-2 time-block"><p class="hour">10AM</p></div>
-        <textarea class="col-md-9"></textarea>
-        <div class="col-md-1 saveBtn"><button class="fas fa-save mt-4"></button></div>
+        <textarea class="col-md-9" id="task-1"></textarea>
+        <div class="col-md-1 saveBtn"><button class="fas fa-save mt-4" id="sav-1"></button></div>
       </div>
       <div class="row">
         <div class="col-md-2 time-block"><p class="hour">11AM</p></div>
-        <textarea class="col-md-9"></textarea>
-        <div class="col-md-1 saveBtn"><button class="fas fa-save mt-4"></button></div>
+        <textarea class="col-md-9" id="task-2"></textarea>
+        <div class="col-md-1 saveBtn"><button class="fas fa-save mt-4" id="sav-2"></button></div>
       </div>
       <div class="row">
         <div class="col-md-2 time-block"><p class="hour">12PM</p></div>
-        <textarea class="col-md-9"></textarea>
-        <div class="col-md-1 saveBtn"><button class="fas fa-save mt-4"></button></div>
+        <textarea class="col-md-9" id="task-3"></textarea>
+        <div class="col-md-1 saveBtn"><button class="fas fa-save mt-4" id="sav-3"></button></div>
       </div>
       <div class="row">
         <div class="col-md-2 time-block"><p class="hour">1PM</p></div>
-        <textarea class="col-md-9"></textarea>
-        <div class="col-md-1 saveBtn"><button class="fas fa-save mt-4"></button></div>
+        <textarea class="col-md-9" id="task-4"></textarea>
+        <div class="col-md-1 saveBtn"><button class="fas fa-save mt-4" id="sav-4"></button></div>
       </div>
       <div class="row">
         <div class="col-md-2 time-block"><p class="hour">2PM</p></div>
-        <textarea class="col-md-9"></textarea>
-        <div class="col-md-1 saveBtn"><button class="fas fa-save mt-4"></button></div>
+        <textarea class="col-md-9" id="task-5"></textarea>
+        <div class="col-md-1 saveBtn"><button class="fas fa-save mt-4" id="sav-5"></button></div>
       </div>
       <div class="row">
         <div class="col-md-2 time-block"><p class="hour">3PM</p></div>
-        <textarea class="col-md-9"></textarea>
-        <div class="col-md-1 saveBtn"><button class="fas fa-save mt-4"></button></div>
+        <textarea class="col-md-9" id="task-6"></textarea>
+        <div class="col-md-1 saveBtn"><button class="fas fa-save mt-4" id="sav-6"></button></div>
       </div>
       <div class="row">
         <div class="col-md-2 time-block"><p class="hour">4PM</p></div>
-        <textarea class="col-md-9"></textarea>
-        <div class="col-md-1 saveBtn"><button class="fas fa-save mt-4"></button></div>
+        <textarea class="col-md-9" id="task-7"></textarea>
+        <div class="col-md-1 saveBtn"><button class="fas fa-save mt-4" id="sav-7"></button></div>
       </div>
       <div class="row">
         <div class="col-md-2 time-block"><p class="hour">5PM</p></div>
-        <textarea class="col-md-9"></textarea>
-        <div class="col-md-1 saveBtn"><button class="fas fa-save mt-4"></button></div>
+        <textarea class="col-md-9" id="task-8"></textarea>
+        <div class="col-md-1 saveBtn"><button class="fas fa-save mt-4" id="sav-8"></button></div>
       </div>
       
     </div>
+    <script>
+      var workTasks = ['','','','','','','','',''];
+      document.getElementById("sav-0").addEventListener("click", function(){
+        var tasks = document.getElementById("task-0").value;
+        workTasks[0] = tasks;
+        saveTasks();
+      }, false);
+      document.getElementById("sav-1").addEventListener("click", function(){
+        var tasks = document.getElementById("task-1").value;
+        workTasks[1] = tasks;
+        saveTasks();
+      }, false);
+      document.getElementById("sav-2").addEventListener("click", function(){
+        var tasks = document.getElementById("task-2").value;
+        workTasks[2] = tasks;
+        saveTasks();
+      }, false);
+      document.getElementById("sav-3").addEventListener("click", function(){
+        var tasks = document.getElementById("task-3").value;
+        workTasks[3] = tasks;
+        saveTasks();
+      }, false);
+      document.getElementById("sav-4").addEventListener("click", function(){
+        var tasks = document.getElementById("task-4").value;
+        workTasks[4] = tasks;
+        saveTasks();
+      }, false);
+      document.getElementById("sav-5").addEventListener("click", function(){
+        var tasks = document.getElementById("task-5").value;
+        workTasks[5] = tasks;
+        saveTasks();
+      }, false);
+      document.getElementById("sav-6").addEventListener("click", function(){
+        var tasks = document.getElementById("task-6").value;
+        workTasks[6] = tasks;
+        saveTasks();
+      }, false);
+      document.getElementById("sav-7").addEventListener("click", function(){
+        var tasks = document.getElementById("task-7").value;
+        workTasks[7] = tasks;
+        saveTasks();
+      }, false);
+      document.getElementById("sav-8").addEventListener("click", function(){
+        var tasks = document.getElementById("task-8").value;
+        workTasks[8] = tasks;
+        saveTasks();
+      }, false);
+      
+      var saveTasks = function(){
+        localStorage.setItem("workTasks", JSON.stringify(workTasks));
+        console.log(workTasks);
+      };
+      var loadTasks = function(){
+        workTasks = JSON.parse(localStorage.getItem("workTasks"));
+        console.log(workTasks);
+      };
+      loadTasks();
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
