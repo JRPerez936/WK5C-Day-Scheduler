@@ -81,6 +81,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script>
       var workTasks = ['','','','','','','','',''];
+      var time = moment().hour();
       document.getElementById("sav-0").addEventListener("click", function(){
         var tasks = document.getElementById("task-0").value;
         workTasks[0] = tasks;
@@ -149,8 +150,116 @@
       document.getElementById("task-7").value = workTasks[7];
       document.getElementById("task-8").value = workTasks[8];
 
-      var time = moment().format();
-      console.log(time);
+      if(time == 9){
+        document.getElementById("task-0").setAttribute("class", "col-md-9 present");
+        document.getElementById("task-1").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-2").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-3").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-4").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-5").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-6").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-7").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-8").setAttribute("class", "col-md-9 future");
+      }
+      else if(time == 10){
+        document.getElementById("task-0").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-1").setAttribute("class", "col-md-9 present");
+        document.getElementById("task-2").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-3").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-4").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-5").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-6").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-7").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-8").setAttribute("class", "col-md-9 future");
+      }
+      else if(time == 11){
+        document.getElementById("task-0").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-1").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-2").setAttribute("class", "col-md-9 present");
+        document.getElementById("task-3").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-4").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-5").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-6").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-7").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-8").setAttribute("class", "col-md-9 future");
+      }
+      else if(time == 12){
+        document.getElementById("task-0").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-1").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-2").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-3").setAttribute("class", "col-md-9 present");
+        document.getElementById("task-4").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-5").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-6").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-7").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-8").setAttribute("class", "col-md-9 future");
+      }
+      else if(time == 13){
+        document.getElementById("task-0").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-1").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-2").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-3").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-4").setAttribute("class", "col-md-9 present");
+        document.getElementById("task-5").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-6").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-7").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-8").setAttribute("class", "col-md-9 future");
+      }
+      else if(time == 14){
+        document.getElementById("task-0").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-1").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-2").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-3").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-4").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-5").setAttribute("class", "col-md-9 present");
+        document.getElementById("task-6").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-7").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-8").setAttribute("class", "col-md-9 future");
+      }
+      else if(time == 15){
+        document.getElementById("task-0").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-1").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-2").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-3").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-4").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-5").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-6").setAttribute("class", "col-md-9 present");
+        document.getElementById("task-7").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-8").setAttribute("class", "col-md-9 future");
+      }
+      else if(time == 16){
+        document.getElementById("task-0").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-1").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-2").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-3").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-4").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-5").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-6").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-7").setAttribute("class", "col-md-9 present");
+        document.getElementById("task-8").setAttribute("class", "col-md-9 future");
+      }
+      else if(time == 17){
+        document.getElementById("task-0").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-1").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-2").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-3").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-4").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-5").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-6").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-7").setAttribute("class", "col-md-9 past");
+        document.getElementById("task-8").setAttribute("class", "col-md-9 present");
+      }
+      else{
+        document.getElementById("task-0").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-1").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-2").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-3").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-4").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-5").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-6").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-7").setAttribute("class", "col-md-9 future");
+        document.getElementById("task-8").setAttribute("class", "col-md-9 future");
+      }
     </script>
   </body>
 </html>
